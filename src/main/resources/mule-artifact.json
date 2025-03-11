@@ -1,0 +1,19 @@
+{
+    "configs": [
+      "mule-app.xml"
+    ],
+    "redeploymentEnabled": true,
+    "name": "mulesoft-cloudhub-app",
+    "minMuleVersion": "4.4.0",
+    "requiredProduct": "MULE",
+    "classLoaderModelLoaderDescriptor": {
+      "id": "mule",
+      "attributes": {
+        "exportedResources": []
+      }
+    },
+    "bundleDescriptorLoader": {
+      "id": "mule",
+      "attributes": {}
+    }
+  }
