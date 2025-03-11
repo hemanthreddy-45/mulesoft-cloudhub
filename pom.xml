@@ -8,21 +8,33 @@
     <groupId>com.mycompany</groupId>
     <artifactId>mulesoft-cloudhub-app</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>mule-application</packaging> <!-- Updated packaging -->
 
     <name>mulesoft-cloudhub-app</name>
     <description>Sample MuleSoft CloudHub application</description>
 
     <repositories>
-        <!-- MuleSoft Repository -->
+        <!-- MuleSoft Repositories -->
         <repository>
-            <id>mulesoft-repository</id>
-            <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+            <id>anypoint-exchange-v3</id>
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+        </repository>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- Mule dependencies can be added here if needed -->
+        <!-- Add required dependencies here -->
+        <dependency>
+            <groupId>org.mule.connectors</groupId>
+            <artifactId>mule-http-connector</artifactId>
+            <version>1.10.3</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
     </dependencies>
 
     <build>
@@ -31,7 +43,7 @@
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>3.9.0</version> <!-- Ensure this is a stable version -->
+                <version>4.4.0</version> <!-- Updated version -->
                 <executions>
                     <execution>
                         <goals>
