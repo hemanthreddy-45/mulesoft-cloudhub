@@ -8,13 +8,12 @@
     <groupId>com.mycompany</groupId>
     <artifactId>mulesoft-cloudhub-app</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>mule-application</packaging> <!-- Updated packaging -->
+    <packaging>mule-application</packaging>
 
     <name>mulesoft-cloudhub-app</name>
     <description>Sample MuleSoft CloudHub application</description>
 
     <repositories>
-        <!-- MuleSoft Repositories -->
         <repository>
             <id>anypoint-exchange-v3</id>
             <name>Anypoint Exchange</name>
@@ -26,6 +25,17 @@
             <url>https://repository.mulesoft.org/releases/</url>
         </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <!-- Add required dependencies here -->
@@ -39,11 +49,11 @@
 
     <build>
         <plugins>
-            <!-- Mule Maven Plugin -->
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>4.4.0</version> <!-- Updated version -->
+                <version>4.4.0</version>
+                <extensions>true</extensions>
                 <executions>
                     <execution>
                         <goals>
@@ -57,7 +67,7 @@
                         <password>Friday@123</password>
                         <muleCloudHubDeployment>
                             <appName>hello-world-app</appName>
-                            <region>us-east-1</region> <!-- Change region if necessary -->
+                            <region>us-east-1</region>
                         </muleCloudHubDeployment>
                     </muleDeployment>
                 </configuration>
