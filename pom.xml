@@ -22,7 +22,7 @@
     </repositories>
 
     <dependencies>
-        <!-- Add Mule dependencies here if needed -->
+        <!-- Mule dependencies can be added here if needed -->
     </dependencies>
 
     <build>
@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>3.9.0</version> <!-- You can use the available version -->
+                <version>3.9.0</version> <!-- Ensure this is a stable version -->
                 <executions>
                     <execution>
                         <goals>
@@ -41,11 +41,11 @@
                 </executions>
                 <configuration>
                     <muleDeployment>
-                        <username>${MULESOFT_USERNAME}</username>
-                        <password>${MULESOFT_PASSWORD}</password>
+                        <username>hemanthreddy071</username>
+                        <password>Friday@!23</password>
                         <muleCloudHubDeployment>
                             <appName>hello-world-app</appName>
-                            <region>us-east-1</region> <!-- Update to your CloudHub region -->
+                            <region>us-east-1</region> <!-- Change region if necessary -->
                         </muleCloudHubDeployment>
                     </muleDeployment>
                 </configuration>
