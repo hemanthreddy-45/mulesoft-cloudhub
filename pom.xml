@@ -38,6 +38,15 @@
     </pluginRepositories>
 
     <dependencies>
+        <!-- Mule HTTP Connector (using version 1.4.0 as an example) -->
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-http-connector</artifactId>
+            <version>1.4.0</version> <!-- Changed to a different version -->
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Add other required dependencies here -->
         <dependency>
             <groupId>com.github.spullara.mustache.java</groupId>
             <artifactId>compiler</artifactId>
@@ -52,13 +61,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
             <version>4.4</version>
-        </dependency>
-        <!-- Mule HTTP Connector Dependency -->
-        <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-http-connector</artifactId>
-            <version>1.5.6</version> <!-- Ensure version compatibility with your Mule runtime -->
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -98,4 +100,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
