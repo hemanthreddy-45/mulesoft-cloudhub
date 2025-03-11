@@ -38,7 +38,6 @@
     </pluginRepositories>
 
     <dependencies>
-        <!-- Add required dependencies here -->
         <dependency>
             <groupId>com.github.spullara.mustache.java</groupId>
             <artifactId>compiler</artifactId>
@@ -54,9 +53,25 @@
             <artifactId>commons-collections4</artifactId>
             <version>4.4</version>
         </dependency>
+        <!-- Mule HTTP Connector Dependency -->
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-http-connector</artifactId>
+            <version>1.5.6</version> <!-- Ensure version compatibility with your Mule runtime -->
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>mule-artifact.json</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
@@ -72,10 +87,10 @@
                 </executions>
                 <configuration>
                     <muleDeployment>
-                        <username>hemanthreddy071</username> <!-- Replace with property -->
-                        <password>Friday@123</password> <!-- Replace with property -->
+                        <username>hemanthreddy071</username>
+                        <password>Friday@123</password>
                         <muleCloudHubDeployment>
-                            <appName>hello-world-app</appName> <!-- Unique CloudHub app name -->
+                            <appName>hello-world-app</appName>
                             <region>us-east-1</region>
                         </muleCloudHubDeployment>
                     </muleDeployment>
@@ -83,5 +98,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
