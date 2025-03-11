@@ -40,9 +40,9 @@
     <dependencies>
         <!-- Mule HTTP Connector (using version 1.4.0 as an example) -->
         <dependency>
-            <groupId>org.mule.modules</groupId>
+            <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
-            <version>1.9.0</version> <!-- Changed to a different version -->
+            <version>1.10.0</version> <!-- Changed to a different version -->
             <scope>provided</scope>
         </dependency>
 
