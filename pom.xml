@@ -57,39 +57,31 @@
     </dependencies>
 
     <build>
-    <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <includes>
-                <include>mule-artifact.json</include>
-            </includes>
-        </resource>
-    </resources>
-    <plugins>
-        <plugin>
-            <groupId>org.mule.tools.maven</groupId>
-            <artifactId>mule-maven-plugin</artifactId>
-            <version>4.4.0</version>
-            <extensions>true</extensions>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>deploy</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <muleDeployment>
-                    <username>hemanthreddy071</username>
-                    <password>Friday@123</password>
-                    <muleCloudHubDeployment>
-                        <appName>hello-world-app</appName>
-                        <region>us-east-1</region>
-                    </muleCloudHubDeployment>
-                </muleDeployment>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+        <plugins>
+            <plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>mule-maven-plugin</artifactId>
+                <version>4.4.0</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <muleDeployment>
+                        <username>hemanthreddy071</username> <!-- Replace with property -->
+                        <password>Friday@123</password> <!-- Replace with property -->
+                        <muleCloudHubDeployment>
+                            <appName>hello-world-app</appName> <!-- Unique CloudHub app name -->
+                            <region>us-east-1</region>
+                        </muleCloudHubDeployment>
+                    </muleDeployment>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
