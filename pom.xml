@@ -2,41 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany</groupId>
     <artifactId>mulesoft-cloudhub-app</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>mulesoft-cloudhub-app</name>
+    <description>Sample MuleSoft CloudHub application</description>
+
+    <repositories>
+        <!-- MuleSoft Repository -->
+        <repository>
+            <id>mulesoft-repository</id>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-http-connector</artifactId>
-            <version>1.5.0</version>
-        </dependency>
+        <!-- Add Mule dependencies here if needed -->
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Mule Maven Plugin -->
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>3.9.0</version>
+                <version>3.10.0</version> <!-- Updated version -->
                 <executions>
                     <execution>
                         <goals>
-                            <goal>deploy</goal> <!-- Deploy goal to push app to CloudHub -->
+                            <goal>deploy</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
                     <muleDeployment>
-                        <username>hemanthreddy071</username> <!-- MuleSoft Username -->
-                        <password>Friday@123</password> <!-- MuleSoft Password -->
+                        <username>hemanthreddy071</username>
+                        <password>Friday@123</password>
                         <muleCloudHubDeployment>
-                            <appName>hello-world-app</appName> <!-- CloudHub Application Name -->
-                            <region>us-east-1</region> <!-- Deployment Region -->
+                            <appName>hello-world-app</appName>
+                            <region>us-east-1</region> <!-- Update to your CloudHub region -->
                         </muleCloudHubDeployment>
                     </muleDeployment>
                 </configuration>
