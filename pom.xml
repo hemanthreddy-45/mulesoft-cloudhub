@@ -54,7 +54,7 @@
                 <configuration>
                     <muleDeployment>
                         <username>hemanthreddy071</username>
-                        <password>Friday@!23</password>
+                        <password>Friday@123</password>
                         <muleCloudHubDeployment>
                             <appName>hello-world-app</appName>
                             <region>us-east-1</region> <!-- Change region if necessary -->
