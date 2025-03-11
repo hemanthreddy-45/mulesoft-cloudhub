@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
-                <version>3.10.0</version> <!-- Updated version -->
+                <version>3.9.0</version> <!-- You can use the available version -->
                 <executions>
                     <execution>
                         <goals>
@@ -41,8 +41,8 @@
                 </executions>
                 <configuration>
                     <muleDeployment>
-                        <username>hemanthreddy071</username>
-                        <password>Friday@123</password>
+                        <username>${MULESOFT_USERNAME}</username>
+                        <password>${MULESOFT_PASSWORD}</password>
                         <muleCloudHubDeployment>
                             <appName>hello-world-app</appName>
                             <region>us-east-1</region> <!-- Update to your CloudHub region -->
